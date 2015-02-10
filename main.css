@@ -1,0 +1,23 @@
+* {
+	box-sizing:border-box;
+}
+
+.ipgoals {
+    border: 2px solid #000;
+    margin: 20px;
+}
+
+.completedgoals {
+    border: 2px solid #000;
+    margin: 20px;
+}
+
+.detailgoal {
+    border: 2px solid #000;
+    margin: 20px;
+}
+
+.debugwindow {
+    border: 2px solid #000;
+    margin: 20px;
+}
