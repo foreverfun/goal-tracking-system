@@ -2,21 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Untitled</title>
+  <title>Goal Tracking System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<div class="ipgoals"><h2>IP Goals:</h2>
-  </div>
-  <div class="completedgoals"><h2>Completed Goals:</h2>
-	</div>
-  <div class="detailgoal">
-  <h2>Goal Details:</h2>  
-  </div>
-    <!--<div class="debugwindow"><h2>Debug Window:</h2>
-    </div>-->
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script src="goal-tracking.js"></script>
+	
+  <!-- boostrap navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Goal Tracking System</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <form class="navbar-form navbar-right">            
+          <button type="button" class="btn navbar-btn">
+            <div class="userprofile">
+              <!-- dynamic insert user image and name -->
+            </div>
+          </button>
+          <button type="button" class="btn btn-success">Sign Out</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 
+  <!-- body container section -->
+  <div class="container bodycontainer">
+
+    <!-- Content -->
+    <!-- Today's Date & Time -->
+    <div class="panel panel-default">
+    <div class="panel-body text-center">
+      <div class="dateheading">
+        <!-- insert date dynamic -->
+      </div>
+    </div>
+    </div>
+
+    <!-- ==================================================== -->
+    <!-- Completed Goals -->
+    <div class="panel panel-default">
+        
+    <div class="panel-heading">
+      Completed Goals
+    </div>
+        
+    <div class="row panelrow">
+      <div class="col-md-1">#</div>
+      <div class="col-md-3">Goal Title</div>
+      <div class="col-md-6">Completed Date</div>
+      <div class="col-md-2">Details</div>
+    </div>
+
+    <div class="completedgoals">
+      <!-- dynmaic insert completed goal -->
+    </div>    
+  
+  </div>
+  <!-- Completed Goals End -->
+  <!-- ==================================================== -->
+
+  <!-- modal -->
+  <div class="modal fade" id="goaleditingform" tabindex="-1" role="dialog" aria-labelledby="goaleditingformlabel" aria-hidden="true">
+    
+    <div class="modal-dialog">
+      
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="goaleditingformlabel">Goal Editing From</h4>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default">Save</button>
+          <button type="button" class="btn btn-default">Delete</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>  
+        
+        <div class="modal-body">
+   
+          <form class="form-horizontal">
+
+            <div class="form-group">
+              <label class="control-label col-lg-2" for="goaltitle">Title:</label>
+              <div class="col-lg-6">
+                <input type="text" class="form-control goaltitlec" id="goaltitle">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="control-label col-lg-2" for="goaldesc">Description:</label>
+              <div class="col-lg-6">          
+                <textarea class="form-control goaldescc" rows="8"></textarea>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="control-label col-lg-2" for="goaldeadline">Deadline:</label>
+              <div class="col-lg-6">
+                <input type="text" class="form-control goaldeadlinec" id="goaldealine">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-lg-2" for="goalcompleteddate">Status:</label>
+              <div class="col-lg-6">
+                <input type="text" class="form-control goalcompleteddatec" id="goalcompleteddate">
+              </div>
+            </div>
+          
+          </form>
+
+        </div>
+
+      </div> <!-- modal-content end -->
+    </div> <!-- modal-dialog end -->
+  </div> <!-- modal end -->    
+  <!-- ==================================================== -->
+
+  </div> <!-- body container end -->
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="goal-tracking-view.js"></script>
+	<script src="goal-tracking.js"></script>
 </body>
 </html>

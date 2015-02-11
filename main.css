@@ -2,7 +2,23 @@
 	box-sizing:border-box;
 }
 
-.ipgoals {
+body { 
+  background: #ccc;
+   
+}
+
+.bodycontainer {
+  width:90%;
+  margin:auto;
+  padding-top: 80px;
+}
+
+.panelrow {
+  padding: 5px 10px;
+  border-bottom: 1px dashed #ccc;
+}
+
+/*.ipgoals {
     border: 2px solid #000;
     margin: 20px;
 }
@@ -20,4 +36,4 @@
 .debugwindow {
     border: 2px solid #000;
     margin: 20px;
-}
+}*/
