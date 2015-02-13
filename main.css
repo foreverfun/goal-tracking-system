@@ -18,22 +18,34 @@ body {
   border-bottom: 1px dashed #ccc;
 }
 
-/*.ipgoals {
-    border: 2px solid #000;
-    margin: 20px;
+.formsize {
+  width: 80%;
 }
 
-.completedgoals {
-    border: 2px solid #000;
-    margin: 20px;
+.modalfooterbtns {
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ccc;
 }
 
-.detailgoal {
-    border: 2px solid #000;
-    margin: 20px;
+.modalgoaldatadisplay {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
-.debugwindow {
-    border: 2px solid #000;
-    margin: 20px;
-}*/
+.modaltasksdataarea {
+  padding-top: 10px;
+}
+
+.tasksize {
+  width: 80%;
+}
+
+.modaltaskformdisplay {
+  border-bottom: 1px dashed #ccc;
+}
+
+.modaladdataskbtn {
+  border-top: 1px dashed #ccc;
+  margin-top: 10px;
+  padding-top: 10px;
+}

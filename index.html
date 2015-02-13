@@ -9,7 +9,7 @@
 </head>
 <body>
 	
-  <!-- boostrap navbar -->
+  <!-- navbar -->
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -27,7 +27,7 @@
               <!-- dynamic insert user image and name -->
             </div>
           </button>
-          <button type="button" class="btn btn-success">Sign Out</button>
+          <button type="button" class="btn btn-danger">Log Out</button>
         </form>
       </div>
     </div>
@@ -41,98 +41,217 @@
     <div class="panel panel-default">
     <div class="panel-body text-center">
       <div class="dateheading">
-        <!-- insert date dynamic -->
+        <!-- insert data dynamic -->
       </div>
     </div>
     </div>
 
     <!-- ==================================================== -->
-    <!-- Completed Goals -->
     <div class="panel panel-default">
         
-    <div class="panel-heading">
-      Completed Goals
-    </div>
+      <div class="panel-heading text-center">
+        <h2>Reminder</h2>
+      </div>
+
+      <div class="row panelrow">
+        <div class="col-md-3">Goal</div>
+        <div class="col-md-2">Status</div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">Due Date</div>
+        <div class="col-md-2">Details</div>
+      </div>
+
+      <div class="displaydangerallreminders">
         
-    <div class="row panelrow">
-      <div class="col-md-1">#</div>
-      <div class="col-md-3">Goal Title</div>
-      <div class="col-md-6">Completed Date</div>
-      <div class="col-md-2">Details</div>
+        <div class="row panelrow displaydanger">
+          <div class="col-md-3"><font color="red"><i><strong>Lose Weight</strong></i></font></div>
+          <div class="col-md-2">
+          <div class='progress'>
+            <div class='progress-bar progress-bar-danger progress-bar-striped active' 
+            role='progressbar' aria-valuenow='75' aria-valuemin='0' 
+            aria-valuemax='100' style='width:75%'>75% complete</div>
+          </div> 
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-3"><font color="red"><i><strong>TODAY</strong></i></font></div>
+          <div class="col-md-2"><button type="button" class="btn btn-danger btn-sm btndangerdata">Details</button>
+          </div>
+        </div>
+        <div class="row panelrow">
+          <div class="col-md-3"><strong>Learn Javascript</strong></div>
+          <div class="col-md-2">
+          <div class='progress'>
+            <div class='progress-bar progress-bar-warning progress-bar-striped active' 
+            role='progressbar' aria-valuenow='50' aria-valuemin='0' 
+            aria-valuemax='100' style='width:50%'>50% complete</div>
+          </div> 
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-3"><strong>3 Days</strong></div>
+          <div class="col-md-2"><button type="button" class="btn btn-warning btn-sm btnwarningdata">Details</button></div>
+        </div>
+        <!--
+        <div class="row panelrow">
+          <div class="col-md-3">Learn Kick Servce</div>
+          <div class="col-md-2">
+          <div class='progress'>
+            <div class='progress-bar progress-bar-info progress-bar-striped active' 
+            role='progressbar' aria-valuenow='25' aria-valuemin='0' 
+            aria-valuemax='100' style='width:25%'>25% complete</div>
+          </div> 
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-3">7 Days</div>
+          <div class="col-md-2"><button type="button" class="btn btn-info btn-sm btn-infodata">Details</button></div>
+        </div>
+        -->
+      </div>
+
     </div>
-
-    <div class="completedgoals">
-      <!-- dynmaic insert completed goal -->
-    </div>    
-  
-  </div>
-  <!-- Completed Goals End -->
-  <!-- ==================================================== -->
-
-  <!-- modal -->
-  <div class="modal fade" id="goaleditingform" tabindex="-1" role="dialog" aria-labelledby="goaleditingformlabel" aria-hidden="true">
     
-    <div class="modal-dialog">
+    <!-- ==================================================== -->
+    <!-- Display goals -->
+    <div class="panel panel-default">
+        
+      <div class="panel-heading text-center">
+        <h2>Goals</h2>
+        <button type="button" class="btn btn-success addagoal">Add A Goal</button>
+      </div>
+        
+      <div class="row panelrow">
+        <!-- <div class="col-md-1">#</div> -->
+        <div class="col-md-3">Goal Title</div>
+        <div class="col-md-3">Status</div>
+        <div class="col-md-1">Deadline</div>
+        <div class="col-md-2">Completed Date</div>
+        <div class="col-md-2">Details</div>
+      </div>
       
-      <div class="modal-content">
-        
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="goaleditingformlabel">Goal Editing From</h4>
-        </div>
-        
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default">Save</button>
-          <button type="button" class="btn btn-default">Delete</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        </div>  
-        
-        <div class="modal-body">
-   
-          <form class="form-horizontal">
+      <div class="displayallgoals">
+        <!-- insert data dynamic -->
+      </div>
+    </div> <!-- Display all goals end --> 
+ 
 
-            <div class="form-group">
-              <label class="control-label col-lg-2" for="goaltitle">Title:</label>
-              <div class="col-lg-6">
-                <input type="text" class="form-control goaltitlec" id="goaltitle">
-              </div>
-            </div>
-            
-            <div class="form-group">
-              <label class="control-label col-lg-2" for="goaldesc">Description:</label>
-              <div class="col-lg-6">          
-                <textarea class="form-control goaldescc" rows="8"></textarea>
-              </div>
-            </div>
-            
-            <div class="form-group">
-              <label class="control-label col-lg-2" for="goaldeadline">Deadline:</label>
-              <div class="col-lg-6">
-                <input type="text" class="form-control goaldeadlinec" id="goaldealine">
-              </div>
-            </div>
+    <div class="modal fade" id="goalform1" tabindex="-1" role="dialog" aria-labelledby="goalformlabel" aria-hidden="true">
 
-            <div class="form-group">
-              <label class="control-label col-lg-2" for="goalcompleteddate">Status:</label>
-              <div class="col-lg-6">
-                <input type="text" class="form-control goalcompleteddatec" id="goalcompleteddate">
-              </div>
-            </div>
+     <div class="modal-dialog">
+      
+        <div class="modal-content">
           
-          </form>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="goalformlabel">Goal</h4>
+          </div>
 
+           <div class="modal-footer modalfooterarea">
+            <div class="modalfooterbtns">
+              <button type="button" class="btn btn-default goalsavebtn">Save</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+
+           <div class="modal-body">
+              <form class="form-horizontal formsize">
+                <div class="reminderdata">
+                </div>
+              </form>
+          </div>    
         </div>
+      </div>  
+    </div>
 
-      </div> <!-- modal-content end -->
-    </div> <!-- modal-dialog end -->
-  </div> <!-- modal end -->    
-  <!-- ==================================================== -->
+    <!-- ==================================================== -->
+    <!-- new goal modal -->
+    
+    <div class="modal fade" id="goalform" tabindex="-1" role="dialog" aria-labelledby="goalformlabel" aria-hidden="true">
+    
+      <div class="modal-dialog">
+      
+        <div class="modal-content">
+          
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="goalformlabel">Goal</h4>
+          </div>
+
+          <div class="modal-footer modalfooterarea">
+            <div class="modalfooterbtns">
+              <button type="button" class="btn btn-default goalsavebtn">Save</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+          
+          <div class="modal-body">
+              <form class="form-horizontal formsize">
+              
+              <h2>Goal:</h2>
+              <div class="form-group"> 
+                <label class="control-label col-lg-3" for="modalgoaltitle">Title:</label>
+                  <div class="col-lg-6">
+                    <input type="text" class="form-control" id="modalgoaltitle" value=""/>
+                  </div> 
+              </div>    
+              
+              <div class="form-group">
+                <label class="control-label col-lg-3" for="modalgoaldes">Description:</label>
+                <div class="col-lg-6">       
+                  <textarea class="form-control" id="modalgoaldes" rows="8"></textarea>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-lg-3" for="modalgoaldeadline">Deadline:</label>
+                <div class="col-lg-6">
+                  <input type="text" class="form-control" id="modalgoaldeadline" value="" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-lg-3" for="modalgoalcompleteddate">Completed Date:</label>
+                <div class="col-lg-6">
+                  <input type="text" class="form-control" id="modalgoalcompleteddate" value="" />
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label class="control-label col-lg-3" for="modalgoalstatus">Status:</label> 
+                <div class="col-lg-6">
+                  <div class="modalpgbar"></div>
+                </div>
+              </div>  
+
+              <h3>Tasks:</h3>
+              <div class="modaltasks">
+              
+              </div>
+
+              <div class="modaladdataskbtn">
+                <button type="button" class="addataskbtn">Add A Task</button>
+                <!-- <input type="text" id="taskcounter" value="0" /> -->
+              </div>
+
+            </form>
+
+          </div>
+        
+        </div> <!-- modal-content end -->
+      </div> <!-- modal-dialog end -->
+    </div> <!-- new goal modal end -->    
+  
+    <!-- ==================================================== -->
 
   </div> <!-- body container end -->
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <script src="goal-tracking-view.js"></script>
-	<script src="goal-tracking.js"></script>
+
+  <script src="goal-tracking-layout.js"></script>
+	<script src="goal-tracking-class.js"></script>
+  <script src="goal-tracking-data.js"></script>
+  <script src="goal-tracking-main.js"></script>
+
 </body>
 </html>
